@@ -3,7 +3,7 @@
 use UserSystem\Classes\Models\Admin;
 use UserSystem\Classes\Models\Message;
 
-require_once('../../app.php');
+require_once('../../../app.php');
 $admin = new Admin;
 $message = new Message;
 
