@@ -6,7 +6,7 @@ $(document).ready(function () {
         }
         $.ajax({
             type: "POST",
-            url: "handler/login.php",
+            url: "handler/auth/login.php",
             data: $("#admin-login-form").serialize() + "&action=adminLogin"
         }).then(
             // resolve/success callback

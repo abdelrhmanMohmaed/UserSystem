@@ -6,7 +6,7 @@
                 <h4 class="m-0">Totel Regsitered Users</h4>
             </div>
             <div class="card-body">
-                <div class="table-responsive  " id="showAllUsers">
+                <div class="table-responsive" id="showAllUsers">
                     <p class="text-center align-self-center lead">
                         Please Wait.....
                     </p>
@@ -15,7 +15,6 @@
         </div>
     </div>
 </div>
-
 
 <!-- diplay User in Details Model  -->
 <div class="modal fade" id="showUserDetailsModal">
@@ -48,6 +47,5 @@
         </div>
     </div>
 </div>
-
 <?php include('inc/footer.php'); ?>
- 
+<script src="assets/js/admin-users.js"></script>

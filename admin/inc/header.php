@@ -50,7 +50,7 @@ if ($session->notHas('username')) {
                             </h3>
                         </a>
                         <h4 class="text-light"><?= $title; ?></h4>
-                        <a href="<?= AURL ?>handler/logout.php" class="text-light mt-1">
+                        <a href="<?= AURL ?>handler/auth/logout.php" class="text-light mt-1">
                             <i class="fas fa-sign-out-alt"></i>
                             &nbsp;Logout
                         </a>

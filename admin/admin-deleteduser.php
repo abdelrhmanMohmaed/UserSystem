@@ -17,4 +17,6 @@
 </div>
 
 <?php include('inc/footer.php'); ?>
+<script src="assets/js/admin-delete.js"></script>
+
  
