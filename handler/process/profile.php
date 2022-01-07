@@ -1,12 +1,12 @@
 <?php
 
-use UserSystem\Classes\Models\Message; 
+use UserSystem\Classes\Models\Message;
 use UserSystem\Classes\Models\Notification;
 
 require_once('../../app.php');
 include("../../inc/AllDataOfUser.php");
 
- 
+
 $message = new Message;
 //used uid by include all data in session
 $notification = new Notification;
@@ -36,7 +36,7 @@ if (isset($_FILES['image'])) {
     }
     $user->update_profile($name, $gender, $dob, $phone, $newImage, $userId);
     // notification to admin user Profile update in db
-   $notification->insert('uid,type,message', "'$userId','admin','Profile Updatee'");
+    $notification->insert('uid,type,message', "'$userId','admin','Profile Updatee'");
     // echo "update";
 }
 
@@ -53,8 +53,8 @@ if ($request->postHas('action') && $request->postHas('action') == 'change_pass')
             $password = password_hash($newPassword, PASSWORD_DEFAULT);
             //update a new password  
             $user->update_password($password, $uid);
-            echo $message->showMessage('success', 'Password Change Successfuly..!'); 
-             // notification to admin user Profile update in db
+            echo $message->showMessage('success', 'Password Change Successfuly..!');
+            // notification to admin user Profile update in db
             $notification->insert('uid,type,message', "'$userId','admin','Password change'");
             //destory all session dute to login agen 
             $session->destroy();
@@ -63,5 +63,12 @@ if ($request->postHas('action') && $request->postHas('action') == 'change_pass')
         }
     } else {
         echo $message->showMessage('danger', 'Current Password Is Wrong..!');
+    }
+}
+// check user is logged in or not
+if ($request->postHas('action') && $request->postHas('action') == 'checkUser') {
+    if (!$user->user_exist($session->get('user'))) {
+        echo 'bye';
+        $session->remove($session->get('user'));
     }
 }

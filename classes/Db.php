@@ -14,6 +14,14 @@ abstract class Db
     {
         $this->conn = mysqli_connect(DB_SERVERNAME, "root", "", "db-user-system");
     }
+    // select All data 
+    public function selectAll(string $fields = "*")
+    {
+        $sql = "SELECT $fields FROM $this->table";
+        $result = mysqli_query($this->conn, $sql);
+
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
     // show email in db
     public function user_exist($email)
     {

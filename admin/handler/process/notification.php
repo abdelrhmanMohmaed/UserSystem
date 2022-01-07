@@ -16,7 +16,7 @@ if ($request->postHas('action') && $request->postHas('action') == 'fetchAllnotif
                 <span aria-hidden="true">&times;</span>
             </button>
             <h4 class="alert-heading">New Notification</h4>
-            <p class="mb-0 lead">' . $row['message'] . 'by' . $row['name'] . '</p>
+            <p class="mb-0 lead">' . $row['message'] . ' by ' . $row['name'] . '</p>
             <hr class="mhy-2">
             <p class="mb-0 float-left"><b>User E-Mail :</b> ' . $row['email'] . '</p>
             <p class="mb-0 float-right">' . $message->timeInAgo($row['created_at']) . '</p>
