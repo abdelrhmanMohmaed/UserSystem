@@ -16,6 +16,10 @@ define("DB_NAME", "db-user-system");
 require_once(PATH . "vendor/autoload.php");
 
 use UserSystem\Classes\Models\Admin;
+use UserSystem\Classes\Models\Feedback;
+use UserSystem\Classes\Models\Message;
+use UserSystem\Classes\Models\Notes;
+use UserSystem\Classes\Models\Notification;
 use UserSystem\Classes\Models\Users;
 use UserSystem\Classes\Session;
 use UserSystem\Classes\Request;
@@ -24,5 +28,7 @@ $session = new Session;
 $request = new Request;
 $user = new Users;
 $admin = new Admin;
-
-
+$notes = new Notes;
+$feedback = new Feedback;
+$notification = new Notification;
+$message = new Message;

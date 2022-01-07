@@ -101,6 +101,7 @@
 <?php include('inc/footer.php') ?>
 
 <script>
+    
     // Load the Visualization API and the corechart package.
     google.charts.load("current", {
         packages: ["corechart"]

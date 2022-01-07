@@ -17,4 +17,4 @@
 </div>
 
 <?php include('inc/footer.php'); ?>
- 
+<script src="assets/js/admin-notes.js"></script>

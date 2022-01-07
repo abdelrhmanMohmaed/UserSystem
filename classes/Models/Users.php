@@ -44,6 +44,7 @@ class Users extends Db
         mysqli_query($this->conn, $sql);
         return true;
     }
+    // Update password 
     public function update_password($password, $id)
     {
         $sql = "UPDATE $this->table SET password = '$password' WHERE id = '$id' AND deleted != 0 ";
@@ -51,4 +52,6 @@ class Users extends Db
         mysqli_query($this->conn, $sql);
         return  true;
     }
+
+
 }

@@ -49,5 +49,6 @@ if ($request->postHas('action') && $request->post('action') == 'checkNotificatio
 // Remove Notification 
 if ($request->postHas('notification_id')) {
     $id = $request->post('notification_id');
-    $allNotification->removeNotification($id);
+    $type = 'user';
+    $allNotification->removeNotification($id, $type);
 };

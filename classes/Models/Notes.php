@@ -45,4 +45,23 @@ class Notes extends Db
         mysqli_query($this->conn, $sql);
         return  true;
     }
+    // fetch all note with user info 
+    public function fetchNoteJoinUser()
+    {
+        $sql = "SELECT notes.id, notes.title, notes.note, notes.created_at, notes.updated_at,
+                                users.name, users.email 
+                            FROM notes 
+                        INNER JOIN users ON notes.uid = users.id";
+
+        $result = mysqli_query($this->conn, $sql);
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
+    public function deleteNoteOfUser($id)
+    {
+        $sql = "DELETE FROM $this->table WHERE id= '$id'";
+        
+        mysqli_query($this->conn, $sql);
+        return true;
+    }
+    
 }
