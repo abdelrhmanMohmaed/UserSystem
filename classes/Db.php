@@ -4,8 +4,8 @@ namespace UserSystem\Classes;
 
 abstract class Db
 {
-    const  USERNAME = "abc@gmail.com";
-    const  PASSWORD = "jhbvkjsdbvkl";
+    // const  USERNAME = "abc@gmail.com";
+    // const  PASSWORD = "jhbvkjsdbvkl";
 
     protected $conn;
     protected $table;

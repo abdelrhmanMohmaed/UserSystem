@@ -67,8 +67,8 @@ if ($request->postHas('action') && $request->postHas('action') == 'change_pass')
 }
 // check user is logged in or not
 if ($request->postHas('action') && $request->postHas('action') == 'checkUser') {
-    if (!$user->user_exist($session->get('user'))) {
+    if (!$user->user_exist($uemail)) {
         echo 'bye';
-        $session->remove($session->get('user'));
+        $session->remove('user');
     }
-}
+} 

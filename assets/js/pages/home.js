@@ -144,5 +144,18 @@ $(document).ready(function () {
             });
         })
     }
+    // check user is logged in or not
+    //     $.ajax({
+    //         url: "handler/process/profile.php",
+    //         method: "POST",
+    //         data: {
+    //             action: 'checkUser'
+    //         },
+    //         success: function (response) {
+    //             if (response === 'bye') {
+    //                 window.location = 'index.php';
+    //             };
+    //         }
+    //     })
 });
 //end home page and ajax 

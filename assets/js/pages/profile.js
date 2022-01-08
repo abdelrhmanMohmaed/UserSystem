@@ -39,7 +39,7 @@ $('#changePassBtn').click(function (e) {
     }
     // check user is logged in or not
     $.ajax({
-        url: "handler/process/profile.php",
+        url: "handler/process/profile.php", 
         method: "POST",
         data: {
             action: 'checkUser'
@@ -47,6 +47,6 @@ $('#changePassBtn').click(function (e) {
     }).then(function (response) {
         if (response === 'bye') {
             window.location = 'index.php';
-        }
+        };
     })
 })

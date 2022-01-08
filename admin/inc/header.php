@@ -18,7 +18,7 @@ if ($session->notHas('username')) {
     $title = ucfirst($title[1]);
     ?>
     <title><?= $title; ?> | Admin Panal</title>
-
+<link rel="shortcut icon" href="assets/iconDBourd.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/datatables.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
